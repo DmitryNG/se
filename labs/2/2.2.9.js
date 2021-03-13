@@ -13,9 +13,10 @@ rl.on('line', function(line){
 });
 
 rl.on('close', () => {
-        console.log(
-            lines[0]
-            .split(' ')
-            .reduce((acc, next) => acc^next)
-            )
+       let n = parseInt(lines[0]);
+        console.log(lines
+            .splice(1)
+            .map(item => item.split(';'))
+            .sort((a, b) => +(b[1]) - +a[1]) [n-1][0]);
+            
 });
